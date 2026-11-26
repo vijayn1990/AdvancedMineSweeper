@@ -1,5 +1,21 @@
 <html>
 <body>
-<h1> hello </h1>
-</body>
+        <select onselect="fetchCount()" id="levelSelector">
+            <option value="10" label="easy">10</option>
+            <option value="20" label="medium"> 20</option>
+            <option value="30" label="hard">30</option>
+        </select>
+        <button type="submit" onclick="fetchGameTable()">Fetch the Mine</button>
+<p id="selectedCount"></p>
+    </body>
 </html>
+
+
+<script type="text/javascript">
+    function fetchCount()
+    {
+        const selectedValue=document.getElementById("levelSelector").value;
+       document.getElementById("selectCount").value= selectedValue;
+    }
+
+</script>
