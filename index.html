@@ -2,11 +2,19 @@
     <title> Welcome to Minesweeper Game</title>
     <h3>Select Game difficulty Level</h3>
     <body>
-        <select onselect="enableStartGame()">
+        <select onselect="enableStartGame()" id="levelSelector">
             <option value="easy" label="easy">Easy</option>
             <option value="medium" label="medium"> Medium</option>
             <option value="hard" label="hard">hard</option>
         </select>
-        <button type="submit" onclick="fetchGameTable">Fetch the Mine</button>
+        <button type="submit" onclick="fetchGameTable()">Fetch the Mine</button>
     </body>
 </html>
+<script type="text/javascript">
+    function fetchGameTable()
+    {
+        const selectLevel=document.getElementById("levelSelector").value;
+        window.open('webpages/'+selectLevel+'Level.html');
+    }
+
+</script>
